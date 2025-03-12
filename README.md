@@ -11,8 +11,8 @@
 - Усі методи `DualLinkedList` покриті unit-тестами (`unittest`).
 - GitHub Actions налаштований для автоматичного запуску тестів при кожному коміті.
 
-🔴 **Коміт, на якому тести впали:** [3a6e77b](https://github.com/your-username/SolveQuadSuperCool/commit/3a6e77b)  
-🟢 **Коміт, де тести відновлені:** [c34697](https://github.com/your-username/SolveQuadSuperCool/commit/c34697)
+ **Коміт, на якому тести впали:** [2c346973ab64c1518623d03bbb976d7dba924c27]( https://github.com/thonly-zukich/SolveQuadEqSuperCool/commit/3a6e77b444d215901f21649703e6a58b0cfbb31a )  
+ **Коміт, де тести відновлені:** [2c346973ab64c1518623d03bbb976d7dba924c27]( https://github.com/thonly-zukich/SolveQuadEqSuperCool/commit/2c346973ab64c1518623d03bbb976d7dba924c27 )
 
 ---
 
