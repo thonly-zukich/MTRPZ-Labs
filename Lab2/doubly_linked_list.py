@@ -15,8 +15,8 @@ class DualLinkedList:
         self.count = 0     # Кількість елементів у списку
 
     def size(self) -> int:
-        """Навмисно повертаємо неправильне значення для тестів"""
-        return self.count + 1  #  Помилка
+        """Повертає кількість елементів у списку"""
+        return self.count
 
     def add(self, character: str):
         """Додає елемент у кінець списку"""
