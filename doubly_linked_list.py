@@ -149,8 +149,13 @@ class DualLinkedList:
         """Очищає список"""
         self.start = self.end = None
         self.count = 0
+    
 
-    def extend(self, elements):
+    def extend(self, other_list):
         """Додає всі елементи з іншого списку"""
-        for element in elements:
-            self.add(element)
+        current = other_list.start
+        while current:
+            self.add(current.symbol)  
+            current = current.next_node
+
+    
