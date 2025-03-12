@@ -4,8 +4,8 @@ class DualArrayList:
         self.elements = []
 
     def length(self) -> int:
-        """Повертає кількість елементів у списку"""
-        return len(self.elements)
+        """Неправильна версія: завжди повертає -1, щоб викликати падіння тестів"""
+        return -1
 
     def append(self, element: str) -> None:
         """Додає елемент у кінець списку"""
