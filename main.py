@@ -1,4 +1,5 @@
 import math
+import sys
 
 def solve_funny_math(alpha, beta, gamma):
     if alpha == 0:
@@ -48,5 +49,36 @@ def fun_interactive_mode():
         except ValueError:
             print("🚨 Whoops! That's not a valid number. Try again!")
 
+def file_mode(filename):
+    try:
+        with open(filename, "r") as f:
+            line = f.readline().strip()
+            parts = line.split()
+            if len(parts) != 3:
+                raise ValueError("Invalid file format")
+            alpha, beta, gamma = map(float, parts)
+
+            roots = solve_funny_math(alpha, beta, gamma)
+
+            print(f"Equation is: ({alpha}) x^2 + ({beta}) x + ({gamma}) = 0")
+
+            if len(roots) == 2:
+                print("🎉 There are 2 fantastic roots!")
+                print(f"✨ Root 1: {roots[0]:.6g}")
+                print(f"✨ Root 2: {roots[1]:.6g}")
+            elif len(roots) == 1:
+                print("⭐ Just 1 unique root!")
+                print(f"🦄 Root: {roots[0]:.6g}")
+            else:
+                print("💨 No real roots this time, sorry!")
+
+    except FileNotFoundError:
+        print(f"🚨 Error: File '{filename}' not found.")
+    except ValueError as e:
+        print(f"🚨 Error: {e}")
+
 if __name__ == "__main__":
-    fun_interactive_mode()
+    if len(sys.argv) == 2:
+        file_mode(sys.argv[1])
+    else:
+        fun_interactive_mode()
